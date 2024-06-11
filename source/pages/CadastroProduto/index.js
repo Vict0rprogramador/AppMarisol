@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, ScrollView, SafeAreaView } from 'react-native';
-import {Camera} from 'expo-camera';
+//import {Camera} from 'expo-camera';
 
 export default function CadastroProduct() {
  const navigation = useNavigation();
@@ -30,10 +30,11 @@ export default function CadastroProduct() {
       
       <Text style={styles.text}>Data de validade</Text>
       <TextInput style={styles.textBox} placeholder='Data de validade do produto'></TextInput>
-      <SafeAreaView>
-        <Camera 
-        style={{flex: 1}}/>
-      </SafeAreaView>
+
+      <TouchableOpacity style={styles.botao}>
+        <Text style={styles.buttonText}>Adicionar Fotos</Text>
+      </TouchableOpacity>
+
       <TouchableOpacity style={styles.botao}
       onPress={ () => navigation.navigate('catalago')}>
         <Text style={styles.buttonText}>Confirmar Cadastro</Text>

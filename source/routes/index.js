@@ -16,8 +16,8 @@ const Tab = createBottomTabNavigator();
 function Tabs() {
 return(
     <Tab.Navigator>
-        <Tab.Screen name="home" component={home}/>
-        <Tab.Screen name="catalago" component={brochure}/>
+        <Tab.Screen name="home" component={home} options={{headerShown: false}}/>
+        <Tab.Screen name="catalago" component={brochure} options={{headerShown: false}}/>
     </Tab.Navigator>
     );
 }
@@ -53,7 +53,7 @@ export default function Routes(){
                     <Stack.Screen
                     name="CadastroProduct"
                     component={CadastroProduct}
-                    options={{headerShow: false}}/>
+                    options={{headerShown: false}}/>
                 
                 </Stack.Navigator>
         );

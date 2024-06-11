@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import{useNavigation} from '@react-navigation/native'
 //import { IoAddCircle } from 'react-icons/io5';
 
@@ -7,7 +7,7 @@ import{useNavigation} from '@react-navigation/native'
  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Text>Produtos cadastrados</Text>
+      <Text style={styles.titulo}>Produtos cadastrados</Text>
       <TouchableOpacity
    style={styles.ButtomCadastro}
  onPress={() => navigation.navigate('CadastroProduct')}>
@@ -20,6 +20,10 @@ import{useNavigation} from '@react-navigation/native'
 const styles = StyleSheet.create({
 container:{
     backgroundColor: '#8B4513'
+},
+titulo:{
+  fontSize:30,
+  fontWeight:'bold'
 },
 ButtomCadastro:{
     borderWidth:1,
