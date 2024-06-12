@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { View, FlatList, Image, Dimensions, StyleSheet } from 'react-native';
 
 const DATA = [
-  { image: require('./Backoffice-detalhartarefa-interessado.jpg') },
-  { image: require('./horarioProfissional-intervaloerro.jpg') },
-  { image: require('./puxar_tarefa.PNG') },
+  { id: '1', image: require('../../../assets/icon.png') },
+  { id: '2', image: require('../../../assets/icon.png') },
+  { id: '3', image: require('../../../assets/icon.png') },
 ];
 
 export const Carousel = () => {
@@ -40,7 +40,7 @@ export const Carousel = () => {
             <Image source={item.image} style={styles.image} />
           </View>
         )}
-        keyExtractor={(item, index) => index.toString()}
+        keyExtractor={(item) => item.id}
         showsHorizontalScrollIndicator={false}
       />
       <View style={styles.indicatorContainer}>
